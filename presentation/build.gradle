@@ -21,4 +21,9 @@ dependencies {
     implementation libraries.hiltAndroid
     implementation libraries.hiltViewModel
     kapt libraries.hiltCompiler
+
+    testImplementation testLibraries.junit
+    testImplementation testLibraries.mockito
+    testImplementation testLibraries.coroutinesTest
+    testImplementation testLibraries.archTesting
 }
