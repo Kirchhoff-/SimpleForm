@@ -6,4 +6,8 @@ dependencies {
 
     implementation libraries.coroutines
     implementation libraries.appCompat
+
+    testImplementation testLibraries.junit
+    testImplementation testLibraries.mockito
+    testImplementation testLibraries.coroutinesTest
 }
