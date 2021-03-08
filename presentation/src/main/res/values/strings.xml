@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="login">Login</string>
+    <string name="logout">Logout</string>
+    <string name="invalid_password">Invalid password</string>
+    <string name="invalid_email">Invalid email</string>
+</resources>
