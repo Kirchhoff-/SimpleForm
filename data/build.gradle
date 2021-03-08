@@ -1,0 +1,9 @@
+apply from: '../buildsystem/android-library.gradle'
+
+dependencies {
+    implementation project(":core")
+    implementation project(":domain")
+
+    implementation libraries.coroutines
+    implementation libraries.appCompat
+}

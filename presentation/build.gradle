@@ -1,0 +1,24 @@
+apply from: '../buildsystem/android-library.gradle'
+
+apply plugin: 'kotlin-parcelize'
+apply plugin: "dagger.hilt.android.plugin"
+apply plugin: "androidx.navigation.safeargs.kotlin"
+
+android {
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+    implementation project(":core")
+    implementation project(":domain")
+
+    implementation libraries.lifecycle
+    implementation libraries.navigationFragment
+    implementation libraries.navigationUi
+    implementation libraries.appCompat
+    implementation libraries.hiltAndroid
+    implementation libraries.hiltViewModel
+    kapt libraries.hiltCompiler
+}

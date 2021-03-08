@@ -1,0 +1,5 @@
+apply from: '../buildsystem/android-library.gradle'
+
+dependencies {
+    implementation project(":core")
+}
