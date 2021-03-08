@@ -4,6 +4,6 @@ import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 
 class CoroutineDispatchers : ICoroutineDispatchers {
-    override val IO: CoroutineDispatcher
+    override val io: CoroutineDispatcher
         get() = Dispatchers.IO
 }

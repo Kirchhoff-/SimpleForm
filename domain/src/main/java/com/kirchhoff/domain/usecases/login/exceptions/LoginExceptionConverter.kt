@@ -14,8 +14,13 @@ class LoginExceptionConverter : IExceptionConverter<LoginError> {
 
     private fun createLoginError(loginException: LoginException): LoginError =
         when (loginException.errorCode) {
-            in 0..100 -> LoginError.ServerError(loginException.errorCode.toString())
-            in 101..200 -> LoginError.NetworkError(loginException.errorMessage)
+            in LOGIN_ERROR_RANGE -> LoginError.ServerError(loginException.errorCode.toString())
+            in NETWORK_ERROR_RANGE -> LoginError.NetworkError(loginException.errorMessage)
             else -> LoginError.Other("${loginException.errorCode} ${loginException.errorMessage}")
         }
+
+    companion object {
+        private val LOGIN_ERROR_RANGE = 0..100
+        private val NETWORK_ERROR_RANGE = 101..200
+    }
 }

@@ -60,7 +60,7 @@ class LoginFragmentVM @Inject constructor(
         currentViewState = currentViewState.copy(isLoading = true)
         _viewState.postValue(currentViewState)
 
-        loginJob = viewModelScope.launch(dispatchers.IO) {
+        loginJob = viewModelScope.launch(dispatchers.io) {
             val result = useCase.login(currentViewState.email, currentViewState.password)
 
             currentViewState = currentViewState.copy(isLoading = false)

@@ -8,6 +8,7 @@ import com.kirchhoff.domain.repository.ILoginRepository
 import com.kirchhoff.domain.usecases.login.validator.ILoginValidator
 import javax.inject.Inject
 
+@Suppress("ReturnCount")
 class LoginUseCase @Inject constructor(
     private val loginRepository: ILoginRepository,
     private val loginValidator: ILoginValidator,

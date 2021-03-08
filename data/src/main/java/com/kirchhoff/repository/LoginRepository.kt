@@ -11,6 +11,7 @@ import kotlinx.coroutines.delay
 import javax.inject.Inject
 import kotlin.random.Random
 
+@Suppress("TooGenericExceptionCaught")
 class LoginRepository @Inject constructor(
     private val userService: IUserService,
     private val mapper: IMapper<NetworkUser, User>
