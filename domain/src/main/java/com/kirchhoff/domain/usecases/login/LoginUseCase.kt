@@ -23,7 +23,7 @@ class LoginUseCase @Inject constructor(
             return LoginResult(error = LoginError.InvalidPassword)
         }
 
-        return when(val loginResult = loginRepository.login(email, password)) {
+        return when (val loginResult = loginRepository.login(email, password)) {
             is Result.Success -> LoginResult(user = loginResult.data)
             is Result.Exception -> LoginResult(error = loginExceptionConverter.convert(loginResult.exception))
         }

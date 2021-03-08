@@ -29,8 +29,8 @@ class LoginValidatorTest {
 
     @Test
     fun `verify email validation`() {
-        //Here should be tests for check email
-        //but I will write just simplified versions
+        // Here should be tests for check email
+        // but I will write just simplified versions
 
         val notValidEmail = Random.nextString()
         val validEmail = "somemail@gmail.com"

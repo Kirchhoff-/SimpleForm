@@ -1,6 +1,5 @@
 package com.kirchhoff.domain.usecase.login.exceptions
 
-
 import com.kirchhoff.domain.exceptions.exceptions.LoginException
 import com.kirchhoff.domain.models.LoginError
 import com.kirchhoff.domain.usecases.login.exceptions.LoginExceptionConverter

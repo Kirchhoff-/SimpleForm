@@ -7,7 +7,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
-class UserFragmentVM @Inject constructor(): ViewModel() {
+class UserFragmentVM @Inject constructor() : ViewModel() {
 
     private val _viewState = MutableLiveData<UserViewState>()
     val viewState: LiveData<UserViewState>

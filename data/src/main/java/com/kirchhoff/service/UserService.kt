@@ -2,7 +2,7 @@ package com.kirchhoff.service
 
 import com.kirchhoff.data.models.NetworkUser
 
-class UserService: IUserService {
+class UserService : IUserService {
 
     private val networkUser = NetworkUser("John", "Doe", "Some information", "JohnDoe@gmail.com")
 

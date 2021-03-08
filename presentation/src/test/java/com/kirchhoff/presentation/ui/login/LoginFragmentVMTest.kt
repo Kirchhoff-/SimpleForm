@@ -10,14 +10,16 @@ import com.kirchhoff.presentation.utils.TestDispatchers
 import com.kirchhoff.presentation.utils.nextString
 import junit.framework.TestCase.assertEquals
 import junit.framework.TestCase.assertNull
-
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runBlockingTest
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
-import org.mockito.Mockito.*
+import org.mockito.Mockito.`when`
+import org.mockito.Mockito.mock
+import org.mockito.Mockito.verify
+import org.mockito.Mockito.verifyNoInteractions
 import org.mockito.junit.MockitoJUnitRunner
 import kotlin.random.Random
 
@@ -159,7 +161,8 @@ class LoginFragmentVMTest {
     }
 
     companion object {
-        private val initialViewState =  LoginFragmentVM.LoginViewState("", "",
+        private val initialViewState = LoginFragmentVM.LoginViewState(
+            "", "",
             invalidEmail = false,
             invalidPassword = false,
             isLoading = false

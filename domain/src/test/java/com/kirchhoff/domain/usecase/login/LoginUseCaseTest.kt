@@ -10,14 +10,20 @@ import com.kirchhoff.domain.usecases.login.LoginUseCase
 import com.kirchhoff.domain.usecases.login.validator.ILoginValidator
 import com.kirchhoff.domain.utils.CoroutineRule
 import com.kirchhoff.domain.utils.nextString
-import junit.framework.TestCase.*
+import junit.framework.TestCase.assertEquals
+import junit.framework.TestCase.assertNotNull
+import junit.framework.TestCase.assertNull
+import junit.framework.TestCase.assertTrue
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runBlockingTest
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.mockito.Mock
-import org.mockito.Mockito.*
+import org.mockito.Mockito.`when`
+import org.mockito.Mockito.verify
+import org.mockito.Mockito.verifyNoInteractions
+import org.mockito.Mockito.verifyNoMoreInteractions
 import org.mockito.MockitoAnnotations
 import kotlin.random.Random
 

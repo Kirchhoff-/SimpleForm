@@ -6,12 +6,11 @@ import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.Observer
 import com.kirchhoff.presentation.R
 import com.kirchhoff.presentation.utils.Event
 import com.kirchhoff.presentation.utils.EventObserver
 
-abstract class BaseFragment(@LayoutRes contentLayoutId: Int): Fragment(contentLayoutId) {
+abstract class BaseFragment(@LayoutRes contentLayoutId: Int) : Fragment(contentLayoutId) {
 
     private var progressDialog: AlertDialog? = null
 

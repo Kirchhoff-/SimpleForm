@@ -4,7 +4,7 @@ import com.kirchhoff.domain.exceptions.IExceptionConverter
 import com.kirchhoff.domain.exceptions.exceptions.LoginException
 import com.kirchhoff.domain.models.LoginError
 
-class LoginExceptionConverter: IExceptionConverter<LoginError> {
+class LoginExceptionConverter : IExceptionConverter<LoginError> {
 
     override fun convert(exception: Exception): LoginError =
         when (exception) {
