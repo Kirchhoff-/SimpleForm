@@ -1,4 +1,4 @@
-package com.kirchhoff.domain.usecases
+package com.kirchhoff.domain.usecases.login
 
 import com.kirchhoff.domain.models.LoginResult
 
