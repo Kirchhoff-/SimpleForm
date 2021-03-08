@@ -5,6 +5,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.core.widget.doAfterTextChanged
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.kirchhoff.domain.models.User
 import com.kirchhoff.presentation.R
 import com.kirchhoff.presentation.databinding.FragmentLoginBinding
@@ -12,6 +13,7 @@ import com.kirchhoff.presentation.extensions.hideKeyboard
 import com.kirchhoff.presentation.extensions.setTextIfRequired
 import com.kirchhoff.presentation.extensions.showError
 import com.kirchhoff.presentation.ui.base.BaseFragment
+import com.kirchhoff.presentation.ui.user.UserFragmentArg
 import com.kirchhoff.presentation.utils.viewBinding
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -59,7 +61,16 @@ class LoginFragment : BaseFragment(R.layout.fragment_login) {
     }
 
     private fun moveToUserScreen(user: User) {
-        //Add navigation after creating correspondent fragment
+        findNavController().navigate(
+            LoginFragmentDirections.toUserFragment(
+                UserFragmentArg(
+                    user.firstName,
+                    user.lastName,
+                    user.info,
+                    user.email
+                )
+            )
+        )
     }
 
     override fun onDestroy() {

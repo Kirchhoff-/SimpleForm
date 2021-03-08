@@ -6,4 +6,9 @@
     <string name="logout">Logout</string>
     <string name="invalid_password">Invalid password</string>
     <string name="invalid_email">Invalid email</string>
+
+    <string name="first_name_format">First Name: %s</string>
+    <string name="last_name_format">Last Name: %s</string>
+    <string name="info_format">Info: %s</string>
+    <string name="email_format">Email: %s</string>
 </resources>
